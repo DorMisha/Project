@@ -1,0 +1,15 @@
+[Unit]
+Description=CHATGPT BOT
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/projects/python/ChatGPTBot/
+ExecStart=/projects/python/ChatGPTBot/main.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
